@@ -1,0 +1,51 @@
+﻿@page
+@model RazorProject.Pages.CalcModel
+@{
+    ViewData["Title"] = "Kalkylator";
+}
+
+<h1>@ViewData["Title"]</h1>
+<table class="calc">
+    <tr>
+        <td colspan="4" id="stack" class="display">
+        </td>
+    </tr>
+    <tr>
+        <td id="entry" colspan="4" class="entry">
+            _
+        </td>
+    </tr>
+    <tr>
+        <td class="but" onclick="enter()" colspan="2">enter</td>
+        <td class="but" onclick="cle()">ce</td>
+        <td class="but" onclick="cls()">cs</td>
+    </tr>
+    <tr>
+        <td width="40" class="but-br" onclick="concat('7')">7</td>
+        <td width="40" class="but-br" onclick="concat('8')">8</td>
+        <td width="40" class="but-br" onclick="concat('9')">9</td>
+        <td width="40" class="but" onclick="divOp()">/</td>
+    </tr>
+    <tr>
+        <td class="but-br" onclick="concat('4')">4</td>
+        <td class="but-br" onclick="concat('5')">5</td>
+        <td class="but-br" onclick="concat('6')">6</td>
+        <td class="but" onclick="mulOp()">*</td>
+    </tr>
+    <tr>
+        <td class="but-br" onclick="concat('1')">1</td>
+        <td class="but-br" onclick="concat('2')">2</td>
+        <td class="but-br" onclick="concat('3')">3</td>
+        <td class="but" onclick="subOp()">-</td>
+    </tr>
+    <tr>
+        <td class="but" onclick="chs()">±</td>
+        <td class="but-br" onclick="concat('0')">0</td>
+        <td class="but" onclick="concat('.')">.</td>
+        <td class="but" onclick="addOp()">+</td>
+    </tr>
+</table>
+<p id="debug">ingen fara</p>
+
+
+
